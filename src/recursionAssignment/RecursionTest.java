@@ -25,6 +25,11 @@ public class RecursionTest {
       assertEquals(1, Recursion.count8(8));
     }
 
+    @Test
+    public void Test3() {
+      assertEquals(4, Recursion.count8(8888));
+    }
+
     @After
     public void afterTest() {
       // some steps to perform after tests are run
