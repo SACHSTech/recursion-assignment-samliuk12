@@ -4,7 +4,13 @@ public class Recursion {
 
   public static int count8(int intNumber) {
 
-    return 0;
+    if (intNumber == 8) {
+      return 1;
+    }
+
+    else {
+      return 0;
+    }
 
   }
 
