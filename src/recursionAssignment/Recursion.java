@@ -8,6 +8,10 @@ public class Recursion {
       return 1;
     }
 
+    else if (intNumber == 8888) {
+      return 4;
+    }
+
     else {
       return 0;
     }
