@@ -1,32 +1,27 @@
 package recursionAssignment;
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Before;
-import org.junit.jupiter.api.After;
+import org.junit.After;
+import org.junit.Before;
 
 import recursionAssignment.Recursion;
 
-public class RecursionTest{
+public class RecursionTest {
     
     @Before
-    public void beforeTest(){
+    public void beforeTest() {
       // some steps to perform before tests are run
     }
-    
-    /**
-     * An initial test
-     */
+
+    // Test that checks the base case
     @Test
-    public void Test1(){
-        // make assertion statement(s)
-        // assertEquals(EXPECTEDVALUE, TESTVALUE);
-        // assertTrue(TESTBOOLEAN);
+    public void Test1() {
+      assertEquals(0, Recursion.count8(0));
     }
-    
-    // add more tests
-    
+
     @After
-    public void afterTest(){
+    public void afterTest() {
       // some steps to perform after tests are run
     }
     
