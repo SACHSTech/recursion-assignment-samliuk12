@@ -4,16 +4,16 @@ public class Recursion {
 
   public static int count8(int intNumber) {
 
-    if (intNumber == 8) {
-      return 1;
-    }
+    String strNumber;
 
-    else if (intNumber == 8888) {
-      return 4;
+    strNumber = Integer.toString(intNumber);
+
+    if (strNumber.equals("0")) {
+      return 0;
     }
 
     else {
-      return 0;
+      return strNumber.length();
     }
 
   }
