@@ -38,23 +38,19 @@ public class Recursion {
   *
   */
   public static String endX(String strWord) {
-    
-    String strTemp; 
 
-    if (strWord.length() == 1 || strWord.length() == 0) {
-      strTemp = strWord;
+    if (strWord.length() <= 1) {
+      return strWord;
     }
 
     else {
       if (strWord.charAt(0) == 'x') {
-        strTemp = endX(strWord.substring(1)) + "x";
+        return endX(strWord.substring(1)) + "x";
       }
       else {
-        strTemp = strWord.charAt(0) + endX(strWord.substring(1));
+        return strWord.charAt(0) + endX(strWord.substring(1));
       }
     }
-
-    return strTemp;
 
   }
 
