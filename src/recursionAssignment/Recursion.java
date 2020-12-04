@@ -68,17 +68,15 @@ public class Recursion {
       return true;
     }
 
-    else if (strWord.equals("")) {
+    if (strWord.equals("")) {
       return false;
     }
 
-    else if (strWord.substring(0, 1).equals(strSubstring)) {
+    if (strWord.substring(0, 1).equals(strSubstring)) {
       return strCopies(strWord.substring(1), strSubstring, intCount - 1);
     }
 
-    else {
-      return strCopies(strWord.substring(1), strSubstring, intCount);
-    }
+    return strCopies(strWord.substring(1), strSubstring, intCount);
 
   }
 
