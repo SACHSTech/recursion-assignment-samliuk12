@@ -52,5 +52,10 @@ public class RecursionTest {
     public void Test2_2() {
       assertEquals("x", Recursion.endX("x"));
     }
+
+    @Test
+    public void Test2_3() {
+      assertEquals("xo", Recursion.endX("ox"));
+    }
     
 }
