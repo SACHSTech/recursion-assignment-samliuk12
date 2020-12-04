@@ -64,13 +64,7 @@ public class Recursion {
 
   public static boolean strCopies(String strWord, String strSubstring, int intCount) {
 
-    if (strWord == strSubstring) {
-      return true;
-    }
-
-    else {
-      return false;
-    }
+    return strWord == strSubstring;
 
   }
 
