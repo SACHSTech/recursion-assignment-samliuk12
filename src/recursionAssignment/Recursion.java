@@ -63,18 +63,21 @@ public class Recursion {
   }
 
   public static boolean strCopies(String strWord, String strSubstring, int intCount) {
-
+    
     if (intCount == 0) {
       return true;
     }
-    
+
+    else if (strWord.equals("")) {
+      return false;
+    }
+
+    else if (strWord.substring(0, 1).equals(strSubstring)) {
+      return strCopies(strWord.substring(1), strSubstring, intCount - 1);
+    }
+
     else {
-      if (strWord.equals("") || !strWord.substring(0, 1).equals(strSubstring)) {
-        return false;
-      }
-      else {
-        return true;
-      }
+      return strCopies(strWord.substring(1), strSubstring, intCount);
     }
 
   }
