@@ -73,10 +73,10 @@ public class Recursion {
     }
 
     if (strWord.substring(0, strSubstring.length()).equals(strSubstring)) {
-      return strCopies(strWord.substring(strSubstring.length()), strSubstring, intCount - 1);
+      return strCopies(strWord.substring(1), strSubstring, intCount - 1);
     }
 
-    return strCopies(strWord.substring(strSubstring.length()), strSubstring, intCount);
+    return strCopies(strWord.substring(1), strSubstring, intCount);
 
   }
 
