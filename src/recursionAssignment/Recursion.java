@@ -68,7 +68,7 @@ public class Recursion {
       return true;
     }
 
-    if (strWord.length() == 0) {
+    if (strWord.length() < strSubstring.length()) {
       return false;
     }
 
