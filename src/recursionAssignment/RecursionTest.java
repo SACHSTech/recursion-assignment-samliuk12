@@ -81,7 +81,7 @@ public class RecursionTest {
     // Test that checks the base case, expects true
     @Test
     public void Test3_1() {
-      assertTrue(Recursion.strCopies("", "", 0));
+      assertTrue(Recursion.strCopies("", "b", 0));
     }
 
     // Test where the counter is nonzero, expects false
