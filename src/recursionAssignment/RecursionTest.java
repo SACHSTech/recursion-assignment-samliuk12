@@ -72,5 +72,11 @@ public class RecursionTest {
     public void Test2_5() {
       assertEquals("ofggixx", Recursion.endX("ofxggxi"));
     }
+
+
+    @Test
+    public void Test3_1() {
+      assertEquals(true, Recursion.strCopies("", "", 0));
+    }
     
 }
