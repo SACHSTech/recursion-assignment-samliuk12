@@ -69,14 +69,11 @@ public class Recursion {
     }
     
     else {
-      if (strWord.equals("")) {
+      if (strWord.equals("") || !strWord.substring(0, 1).equals(strSubstring)) {
         return false;
-      }
-      if (strWord.substring(0, 1).equals(strSubstring)) {
-        return true;
       }
       else {
-        return false;
+        return true;
       }
     }
 
