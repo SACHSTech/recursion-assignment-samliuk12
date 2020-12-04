@@ -98,5 +98,10 @@ public class RecursionTest {
     public void Test3_5() {
       assertFalse(Recursion.strCopies("aabbcac", "a", 4));
     }
+
+    @Test
+    public void Test3_6() {
+      assertTrue(Recursion.strCopies("aflkasaflkasalf", "kas", 1));
+    }
     
 }
