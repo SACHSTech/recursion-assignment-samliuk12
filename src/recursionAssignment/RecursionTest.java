@@ -76,7 +76,12 @@ public class RecursionTest {
 
     @Test
     public void Test3_1() {
-      assertEquals(true, Recursion.strCopies("", "", 0));
+      assertTrue(Recursion.strCopies("", "", 0));
+    }
+
+    @Test
+    public void Test3_2() {
+      assertFalse(Recursion.strCopies("", "a", 1));
     }
     
 }
