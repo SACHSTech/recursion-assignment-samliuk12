@@ -39,14 +39,15 @@ public class Recursion {
   */
   public static String endX(String strWord) {
 
-    if (strWord.length() <= 1) {
-      return strWord;
+    if (strWord.equals("") {
+      return "";
     }
 
     else {
       if (strWord.charAt(0) == 'x') {
         return endX(strWord.substring(1)) + "x";
       }
+      
       else {
         return strWord.charAt(0) + endX(strWord.substring(1));
       }
