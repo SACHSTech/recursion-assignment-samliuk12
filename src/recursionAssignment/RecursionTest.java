@@ -73,37 +73,43 @@ public class RecursionTest {
       assertEquals("ofggixx", Recursion.endX("ofxggxi"));
     }
 
-
+    // Test that checks the base case
     @Test
     public void Test3_1() {
       assertTrue(Recursion.strCopies("", "", 0));
     }
 
+    // Test that includes an empty string and the counter is nonzero
     @Test
     public void Test3_2() {
       assertFalse(Recursion.strCopies("", "a", 1));
     }
 
+    // Test where the string matches the substring 
     @Test
     public void Test3_3() {
       assertTrue(Recursion.strCopies("a", "a", 1));
     }
 
+    // Test where the string contains other characters
     @Test
     public void Test3_4() {
       assertTrue(Recursion.strCopies("ab", "a", 1));
     }
 
+    // Test that includes a counter greater than 1
     @Test
     public void Test3_5() {
       assertFalse(Recursion.strCopies("aabbcac", "a", 4));
     }
 
+    // Test that includes a substring longer than 1 character
     @Test
     public void Test3_6() {
       assertTrue(Recursion.strCopies("aflkasaflkasalf", "kas", 1));
     }
 
+    // Test that includes overlapping sequences
     @Test
     public void Test3_7() {
       assertTrue(Recursion.strCopies("afafafa", "afa", 3));

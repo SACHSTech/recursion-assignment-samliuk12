@@ -62,20 +62,32 @@ public class Recursion {
 
   }
 
+  /**
+  * Takes in a string, substring, and number, and determines whether the substring appears at least n copies of the string
+  * 
+  * @param strWord The inputted string
+  * @param strSubstring The inputted substring that is looked for in the word
+  * @param intCount The number of times that the substring must appear in the string
+  * @return whether or not the substring appears in the string at least intCount times
+  */
   public static boolean strCopies(String strWord, String strSubstring, int intCount) {
     
+    // If no instances of substring are necessary, return true
     if (intCount == 0) {
       return true;
     }
 
+    // If the substring is longer than the string and the count isn't 0, return false 
     if (strWord.length() < strSubstring.length()) {
       return false;
     }
 
+    // If the substring is at the front of the word, call the recursive function with a decremented counter
     if (strWord.substring(0, strSubstring.length()).equals(strSubstring)) {
       return strCopies(strWord.substring(1), strSubstring, intCount - 1);
     }
 
+    // If the substring is not at the front of the word, call the recursive function with the same counter
     return strCopies(strWord.substring(1), strSubstring, intCount);
 
   }
