@@ -84,5 +84,9 @@ public class RecursionTest {
       assertFalse(Recursion.strCopies("", "a", 1));
     }
 
+    @Test
+    public void Test3_3() {
+      assertTrue(Recursion.strCopies("a", "a", 1));
+    }
     
 }
