@@ -39,7 +39,14 @@ public class Recursion {
   */
   public static String endX(String strWord) {
     
-    return strWord;
+    String strReverse;
+    strReverse = "";
+
+    for (int i = strWord.length() - 1; i >= 0; i--) {
+      strReverse += strWord.charAt(i);
+    }
+
+    return strReverse;
 
   }
 
