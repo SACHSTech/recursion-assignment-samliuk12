@@ -39,7 +39,7 @@ public class Recursion {
   */
   public static String endX(String strWord) {
     
-    return "";
+    return strWord;
 
   }
 
