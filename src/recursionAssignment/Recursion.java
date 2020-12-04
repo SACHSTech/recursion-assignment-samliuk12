@@ -1,6 +1,5 @@
 package recursionAssignment;
 
-import java.io.*;
 /**
 * A file containing a library of recursion functions
 * @author S.Liu
@@ -9,26 +8,28 @@ import java.io.*;
 public class Recursion {
 
   /**
-  * Takes in a number and returns the number of 8's
+  * Takes in an integer and returns the number of 7's
   *
   * @param intNumber The number
-  * @return the number of 8's
+  * @return the number of 7's
+  *
   */
-  public static int count8(int intNumber) {
+  public static int count7(int intNumber) {
     
     // Base case 
     if (intNumber == 0) {
       return 0;
     }
 
-    // If the last digit is an 8, return 1 + the number of 8's in the remaining digits
-    else if (intNumber % 10 == 8) {
-      return 1 + count8(intNumber / 10); 
+    // If the last digit is a 7, return 1 + the number of 7's in the remaining digits
+    else if (intNumber % 10 == 7) {
+      // intNumber / 10 simply removes the last digit
+      return 1 + count7(intNumber / 10); 
     }
 
-    // If the last digit isn't an 8, return the number of 8's in the remaining digits
+    // If the last digit isn't a 7, return the number of 7's in the remaining digits
     else {
-      return count8(intNumber / 10);
+      return count7(intNumber / 10);
     }
 
   }
@@ -37,7 +38,7 @@ public class Recursion {
   * Takes in a string and returns a string where all the x's are moved to the back of the string 
   * 
   * @param strWord The inputted string 
-  * @return the string with x's moved to the end 
+  * @return the string with all x's moved to the end 
   *
   */
   public static String endX(String strWord) {
@@ -63,12 +64,13 @@ public class Recursion {
   }
 
   /**
-  * Takes in a string, substring, and number, and determines whether the substring appears at least n copies of the string
+  * Takes in a string, substring, and number intCount, and determines whether the substring appears at least intCount times in the string
   * 
   * @param strWord The inputted string
   * @param strSubstring The inputted substring that is looked for in the word
   * @param intCount The number of times that the substring must appear in the string
   * @return whether or not the substring appears in the string at least intCount times
+  *
   */
   public static boolean strCopies(String strWord, String strSubstring, int intCount) {
     
