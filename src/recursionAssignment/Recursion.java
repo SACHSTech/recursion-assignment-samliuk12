@@ -30,4 +30,17 @@ public class Recursion {
 
   }
 
+  /**
+  * Takes in a string and returns a string where all the x's are moved to the back of the string 
+  * 
+  * @param strWord The inputted string 
+  * @return the string with x's moved to the end 
+  *
+  */
+  public static String endX(String strWord) {
+    
+    return "test";
+
+  }
+
 }
