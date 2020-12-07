@@ -10,8 +10,8 @@ public class Recursion {
   /**
   * Takes in an integer and returns the number of 7's
   *
-  * @param intNumber The number
-  * @return the number of 7's
+  * @param intNumber The number that is checked
+  * @return the number of 7's in the number
   *
   */
   public static int count7(int intNumber) {
@@ -21,13 +21,13 @@ public class Recursion {
       return 0;
     }
 
-    // If the last digit is a 7, return 1 + the number of 7's in the remaining digits
+    // If the last digit is a 7, return 1 + the number of 7's in the remaining digits using a recursive call
     else if (intNumber % 10 == 7) {
       // intNumber / 10 simply removes the last digit
       return 1 + count7(intNumber / 10); 
     }
 
-    // If the last digit isn't a 7, return the number of 7's in the remaining digits
+    // If the last digit isn't a 7, return the number of 7's in the remaining digits using a recursive call
     else {
       return count7(intNumber / 10);
     }
@@ -84,12 +84,12 @@ public class Recursion {
       return false;
     }
 
-    // If the substring is at the front of the word, call the recursive function with a decremented counter
+    // If the substring is at the front of the word, call the recursive function on the substring starting at index 1 with a decremented counter
     if (strWord.substring(0, strSubstring.length()).equals(strSubstring)) {
       return strCopies(strWord.substring(1), strSubstring, intCount - 1);
     }
 
-    // If the substring is not at the front of the word, call the recursive function with the same counter
+    // If the substring is not at the front of the word, call the recursive function on the substring starting at index 1 with the same counter
     return strCopies(strWord.substring(1), strSubstring, intCount);
 
   }
